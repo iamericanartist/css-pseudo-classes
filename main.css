@@ -1,0 +1,45 @@
+body {
+  background-color: slategrey;
+  font-family: Tahoma;
+  font-size: 20px;
+  margin: 50px;
+}
+
+
+
+/* 1- li to inline w/no bullets */
+ul {
+	padding-left: 0;
+}
+body ul>li {
+	list-style: none;
+	display: inline-block;
+}
+
+/* 2- The three <span> elements should be displayed 
+		as block elements with a 1 pixel border and 
+		25 pixel margin on all sides */
+span {
+	display:block;
+	border: 1px solid purple;
+	margin: 25px;
+}
+
+ /* 3- In the article element with the class n-child, 
+ 		add a 1 pixel border around every 
+ 		even numbered section element. */
+.n-child section:nth-child(even) {
+  border: 1px solid green;
+  color: red;
+}
+
+
+/* Interesting... : */
+/* This line affects EVEN CHILDREN... 
+		Only C is a Section element tho - 
+		so <div>x</div> is counted as a child?*/
+/*.n-child section:nth-child(even) {
+  border: 1px solid green;
+  color: red;
+}
+*/ 
